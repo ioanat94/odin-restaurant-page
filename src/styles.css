@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+#content {
+    display: grid;
+    grid-template-rows: 10fr 1fr 1fr 1fr;
+}
+
+#header-img {
+    width: 600px;
+    height: auto;
+}
+
+#copyright {
+    text-decoration: none;
+    color: black;
+}
+
+#copyright:hover {
+    text-decoration: underline;
+}
