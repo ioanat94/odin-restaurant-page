@@ -1,12 +1,11 @@
-import fetaChickenSoupImage from './feta-chicken-soup.jpg';
-import ricottaSaladImage from './ricotta-salad.jpg';
-import lambKormaImage from './lamb-korma.jpg';
-import mangoVindalooImage from './mango-vindaloo.jpg';
-import camembertCrepesImage from './camembert-crepes.jpg';
-import chocolateCheesecakeImage from './chocolate-cheesecake.jpg';
+import fetaChickenSoupImage from '../images/feta-chicken-soup.jpg';
+import ricottaSaladImage from '../images/ricotta-salad.jpg';
+import lambKormaImage from '../images/lamb-korma.jpg';
+import mangoVindalooImage from '../images/mango-vindaloo.jpg';
+import camembertCrepesImage from '../images/camembert-crepes.jpg';
+import chocolateCheesecakeImage from '../images/chocolate-cheesecake.jpg';
 
 let content = document.getElementById('content');
-content.classList.add('content-menu');
 
 const fetaChickenSoupImg = new Image();
 fetaChickenSoupImg.src = fetaChickenSoupImage;
@@ -59,6 +58,7 @@ let camembertCrepes = new Food('Camembert and hazelnut crepes', 'Crispy crepes f
 let chocolateCheesecake = new Food('Chocolate and mascarpone cheesecake', 'A velvety cheesecake layered with plain chocolate and mascarpone', 'vanilla | double cream | mascarpone | chocolate', chocolateCheesecakeImg);
 
 export default function loadMenuPage() {
+    content.classList.add('content-menu');
     fetaChickenSoup.renderFood();
     ricottaSalad.renderFood();
     lambKorma.renderFood();

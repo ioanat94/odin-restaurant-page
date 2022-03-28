@@ -1,5 +1,4 @@
 let content = document.getElementById('content');
-content.classList.add('content-contact');
 
 const contactHeader = document.createElement('div');
 contactHeader.textContent = 'CONTACT US';
@@ -62,6 +61,7 @@ formContainer.appendChild(formMessageLabel);
 formContainer.appendChild(formMessage);
 
 export default function loadContactPage() {
+    content.classList.add('content-contact');
     content.appendChild(contactHeader);
     content.appendChild(contactSub);
     content.appendChild(address);
