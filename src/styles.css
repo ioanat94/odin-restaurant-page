@@ -13,7 +13,7 @@ button:hover {
     text-decoration: underline;
 }
 
-#content {
+.content-home {
     display: grid;
     grid-template-rows: 10fr 1fr 1fr 1fr;
 }
