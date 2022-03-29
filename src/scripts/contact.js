@@ -1,23 +1,31 @@
 let content = document.getElementById('content');
 
 const contactHeader = document.createElement('div');
-contactHeader.textContent = 'CONTACT US';
+contactHeader.id = 'contact-header';
+contactHeader.textContent = 'Contact us';
 const contactSub = document.createElement('div');
+contactSub.id = 'contact-sub';
 contactSub.textContent = 'Get in touch for deliveries, reservations, questions or suggestions!';
 
 const address = document.createElement('div');
-address.textContent = 'ADDRESS';
+address.classList.add('info-header');
+address.textContent = 'Address';
 const addressSub = document.createElement('div');
-addressSub.textContent = 'Grub Str 30, Los Angeles, California 56789';
+addressSub.classList.add('info-sub');
+addressSub.textContent = 'Grub Str. 30, Los Angeles, California, 56789';
 
 const phoneNumber = document.createElement('div');
-phoneNumber.textContent = 'PHONE';
+phoneNumber.textContent = 'Phone';
+phoneNumber.classList.add('info-header');
 const phoneNumberSub = document.createElement('div');
+phoneNumberSub.classList.add('info-sub');
 phoneNumberSub.textContent = '555-123-4567';
 
 const email = document.createElement('div');
-email.textContent = 'EMAIL';
+email.classList.add('info-header');
+email.textContent = 'Email';
 const emailSub = document.createElement('div');
+emailSub.classList.add('info-sub');
 emailSub.textContent = 'grubhub@grublord.com';
 
 const formContainer = document.createElement('form');
@@ -32,6 +40,7 @@ formName.type = 'text';
 formName.id = 'form-name';
 
 const formEmailLabel = document.createElement('label');
+formEmailLabel.id = 'email-label';
 formEmailLabel.for = 'form-email';
 formEmailLabel.textContent = 'Email';
 const formEmail = document.createElement('input');
@@ -51,6 +60,11 @@ formMessageLabel.textContent = 'Message';
 const formMessage = document.createElement('textarea');
 formMessage.id = 'form-message';
 
+const formSend = document.createElement('button');
+formSend.textContent = 'Send';
+formSend.id = 'form-send';
+formSend.type = 'button';
+
 formContainer.appendChild(formNameLabel);
 formContainer.appendChild(formName);
 formContainer.appendChild(formEmailLabel);
@@ -59,6 +73,7 @@ formContainer.appendChild(formSubjectLabel);
 formContainer.appendChild(formSubject);
 formContainer.appendChild(formMessageLabel);
 formContainer.appendChild(formMessage);
+formContainer.appendChild(formSend);
 
 export default function loadContactPage() {
     content.classList.add('content-contact');
